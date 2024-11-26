@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://app_user:secure_password@db_server:5432/product_manager
+    depends_on:
+      - db_server
+
+  db_server:  # Cambié el nombre del servicio y contenedor de postgres
+    image: postgres:latest
+    container_name: postgres_server  # Nuevo nombre del contenedor de Postgres
+    environment:
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: secure_password
+      POSTGRES_DB: product_manager
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

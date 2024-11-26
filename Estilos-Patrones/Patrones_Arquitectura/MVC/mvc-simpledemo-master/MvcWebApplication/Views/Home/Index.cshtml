@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Bienvenido a mi aplicación</h1>
+    <p class="lead">Esta es una aplicación de ejemplo elaborada en Asp.Net Mvc.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Saber mas de Asp.Net &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Iniciar Sesión</h2>
+        <p>
+            Por favor inicie sesión para ingresar al sistema
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Ingresar", "Usuarios")">Iniciar sesión &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Registrarse</h2>
+        <p>Su aún no posee una cuenta, puede registrarse.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Registrarse", "Usuarios")">Registrarse &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Acerca de la aplicación</h2>
+        <p>Para mayor información lea la documentación de la aplicación.</p>
+        <p><a class="btn btn-default" href="@Url.Action("About")">Acerca de la aplicación &raquo;</a></p>
+    </div>
+</div>
