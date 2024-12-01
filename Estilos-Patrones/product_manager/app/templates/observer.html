@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Patrón Observer</h2>
+<p>Este patrón define una relación de dependencia entre objetos, de manera que cuando uno cambia, todos los dependientes
+    son notificados.</p>
+<p><strong>Ejemplo:</strong></p>
+<ul>
+    {% for user in users %}
+    <li>{{ user }} recibió la notificación</li>
+    {% endfor %}
+</ul>
+{% endblock %}

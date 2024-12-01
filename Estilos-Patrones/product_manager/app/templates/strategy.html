@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Patrón Strategy</h2>
+<p>Este patrón permite seleccionar dinámicamente un algoritmo en tiempo de ejecución.</p>
+<p><strong>Costos de Envío:</strong></p>
+<ul>
+    {% for method, cost in costs.items() %}
+    <li>{{ method }}: ${{ cost }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
